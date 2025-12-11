@@ -6,6 +6,7 @@ import 'package:myapp/functions/helper.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:myapp/ui/widgets/devider.dart';
 import 'package:intl/intl.dart';
+import 'package:myapp/ui/widgets/profile/show_profile.dart';
 
 part 'button/default_button.dart';
 part 'field/default_text_filed.dart';

@@ -9,9 +9,7 @@ class ProfilePicture extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Change profile picture coming soon...')),
-        );
+        showProfile(context, avatar, username);
       },
       child: Container(
         height: 50,
