@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:myapp/constants/theme/theme.dart';
-import 'package:myapp/cubits/category/category_cubit.dart';
 import 'package:myapp/cubits/schedules/schedules_cubit.dart';
 import 'package:myapp/functions/theme_controller.dart';
 import 'package:myapp/routes/routes.dart';
@@ -30,7 +29,6 @@ class AppWidget extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => AuthCubit()),
         BlocProvider(create: (context) => SchedulesCubit()),
-        BlocProvider(create: (context) => CategoryCubit()),
       ],
       child: ValueListenableBuilder(
         valueListenable: themeController.themeModeNotifier,

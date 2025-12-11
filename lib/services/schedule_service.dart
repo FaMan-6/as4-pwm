@@ -52,30 +52,4 @@ ${schedule.toJson(context)}
       print('Service update error: $e');
     }
   }
-
-  Future<List<Map<String, dynamic>>> fetchCategory(String userId) async {
-    try {
-      final response = await supabase
-          .from('category')
-          .select()
-          .eq('user_id', userId);
-      return response;
-    } catch (e) {
-      print('Service fetch error: $e');
-      return [];
-    }
-  }
-
-  Future<void> addCategory(CategoryModel category) async {
-    print('''
-Data yang dimasukkan:
-${category.toJson()}
-''');
-    try {
-      await supabase.from('category').insert(category.toJson());
-      print('Berhasil memasukan data');
-    } catch (e) {
-      print('Service insert error: $e');
-    }
-  }
 }

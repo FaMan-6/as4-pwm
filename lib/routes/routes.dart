@@ -12,6 +12,5 @@ part 'home_route.dart';
 part 'auth_route.dart';
 part 'splash_route.dart';
 part 'profile_route.dart';
-part 'schedule_route.dart';
 part 'app_route.dart';
 part 'joke_route.dart';
