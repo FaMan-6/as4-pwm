@@ -1,0 +1,30 @@
+library home_pages;
+
+import 'package:flutter/material.dart';
+import 'package:myapp/constants/calendar_variable.dart';
+import 'package:myapp/cubits/schedules/schedules_cubit.dart';
+import 'package:myapp/functions/helper.dart';
+import 'package:myapp/services/api_service.dart';
+import 'package:myapp/ui/widgets/home/custom_calendar.dart';
+import 'package:myapp/ui/widgets/home/greetings.dart';
+import 'package:myapp/ui/widgets/home/schedule_list.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:myapp/cubits/auth/auth_cubit.dart';
+import 'package:myapp/functions/theme_controller.dart';
+import 'package:myapp/functions/user_data.dart';
+import 'package:myapp/constants/theme/schedule_palette.dart';
+import 'package:myapp/models/category_model.dart';
+import 'package:myapp/models/schedule_model.dart';
+import 'package:myapp/ui/widgets/cards/schedule_card.dart';
+import 'package:myapp/cubits/category/category_cubit.dart';
+import 'package:myapp/ui/widgets/cards/add_category_card.dart';
+import 'package:myapp/ui/widgets/cards/default_category_card.dart';
+import 'package:myapp/ui/widgets/widgets.dart';
+
+part 'home_page.dart';
+part 'main_page.dart';
+part 'profile_page.dart';
+part 'schedules/category_detail.dart';
+part 'schedules/schedules_page.dart';
+part 'api/joke_page.dart';
