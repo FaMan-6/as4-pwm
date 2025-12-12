@@ -12,3 +12,4 @@ import 'package:flutter_svg/svg.dart';
 
 part 'login.dart';
 part 'signup_page.dart';
+part 'send_email.dart';

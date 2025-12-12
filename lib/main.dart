@@ -18,6 +18,15 @@ Future<void> main() async {
     anonKey: dotenv.get('SUPABASE_KEY'),
     url: dotenv.get('SUPABASE_URL'),
   );
+
+  Supabase.instance.client.auth.onAuthStateChange.listen((data) {
+    final event = data.event;
+    final session = data.session;
+    if (event == AuthChangeEvent.signedIn && session != null) {
+      Modular.to.navigate('/main/');
+    }
+  });
+
   runApp(ModularApp(module: AppRoute(), child: const AppWidget()));
 }
 
@@ -36,7 +45,7 @@ class AppWidget extends StatelessWidget {
         valueListenable: themeController.themeModeNotifier,
         builder: (context, value, child) {
           return MaterialApp.router(
-            title: 'My App',
+            title: 'Exam App',
             // routerConfig: Modular.routerConfig,
             scrollBehavior: ScrollBehavior().copyWith(scrollbars: false),
             darkTheme: materialTheme.dark(),

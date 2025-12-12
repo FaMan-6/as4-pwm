@@ -37,7 +37,7 @@ class _SignupPageState extends State<SignupPage> {
               WidgetsFlutterBinding.ensureInitialized().addPostFrameCallback((
                 _,
               ) {
-                Modular.to.navigate('/main/');
+                Modular.to.navigate('/auth/send_email');
               });
             }
 

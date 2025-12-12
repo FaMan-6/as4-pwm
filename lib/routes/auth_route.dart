@@ -5,5 +5,6 @@ class AuthRoute extends Module {
   void routes(RouteManager r) {
     r.child('/', child: (context) => LoginPage());
     r.child('/signup', child: (context) => SignupPage());
+    r.child('/send_email', child: (context) => SendEmail());
   }
 }

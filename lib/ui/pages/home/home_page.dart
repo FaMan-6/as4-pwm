@@ -20,10 +20,11 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
+      appBar: AppBar(title: HomeGreetings()),
       body: Column(
         children: [
           SpacerHeight(height: 10),
-          HomeGreetings(),
+
           SpacerHeight(height: 5),
           CustomCalendar(
             onSelectedDate: (date) {

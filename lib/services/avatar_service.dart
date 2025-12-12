@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
+import 'package:myapp/functions/user_data.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class AvatarService {
@@ -16,7 +17,7 @@ class AvatarService {
   // Upload image to Supabase Storage
   Future<String?> uploadAvatar(File file) async {
     try {
-      final userId = supabase.auth.currentUser!.id;
+      final userId = UserData().supabase.id;
       final ext = file.path.split('.').last;
       final fileName = '$userId.$ext';
       final filePath = 'avatars/$fileName';
@@ -41,7 +42,10 @@ class AvatarService {
     try {
       final userId = supabase.auth.currentUser!.id;
 
-      await supabase.from('users').update({'avatar_url': url}).eq('id', userId);
+      await supabase
+          .from('profiles')
+          .update({'avatar_url': url})
+          .eq('id', userId);
 
       return true;
     } catch (e) {
