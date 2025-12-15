@@ -17,7 +17,7 @@ class SendEmail extends StatelessWidget {
             ),
             SpacerHeight(height: 10),
             Text(
-              'We send you an verification semail',
+              'We send you an verification email',
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ],

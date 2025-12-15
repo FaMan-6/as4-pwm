@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:myapp/constants/schedule/label_day.dart';
 import 'package:myapp/cubits/schedules/schedules_cubit.dart';
